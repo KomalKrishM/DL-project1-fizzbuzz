@@ -34,11 +34,11 @@ with open(f_path) as f:
 testX = torch.Tensor([binary_encode(i, NUM_DIGITS) for i in s_ints])
 testY = model(testX)
 predictions = zip(s_ints, list(testY.max(1)[1].data.tolist()))
-out1 = open('software_2.txt','w')
+out1 = open('Software_2.txt','w')
 for (i, x) in predictions:
     out1.write(fizz_buzz_decode(i, x))
     out1.write('\n')
-out = open('software_1.txt','w')
+out = open('Software_1.txt','w')
 for i in s_ints:
     if (i%15==0):
         out.write('fizzbuzz')
